@@ -2,6 +2,31 @@ doctype html
 html
   head
     title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet' type="text/css" href="/stylesheets/main.css")
+    link(rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css")
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js")
+    script(src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js")
   body
+    nav.navbar
+      .container
+        .navbar-header#title
+          h3 Peter Binh Vinh Tran
+          p 3D Artist
+        button.navbar-button.collapsed.centered(type='button', data-toggle='collapse', data-target='#navbar', aria-expanded='false', aria-controls='navbar')
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+        #navbar.collapse.navbar-collapse
+          ul.nav.navbar-nav.navbar-right#menu
+            li.active
+              a(href='#') Demoreel
+            li
+              a(href='#blog') Blog
+            li
+              a(href='#work') Work    
+    hr
     block content
+    footer
+      hr
+      p peter.bv.tran@outlook.com | 
+        a(href="https://ca.linkedin.com/in/peter-tran-683973129") LinkedIn

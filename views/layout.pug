@@ -6,6 +6,7 @@ html
     link(rel="stylesheet" href="/bootstrap/bootstrap.min.css")
     script(src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js")
     script(src="/bootstrap/bootstrap.min.js")
+    script(src="https://npmcdn.com/imagesloaded@4.1/imagesloaded.pkgd.min.js")
   body
     nav.navbar
       .container
@@ -19,11 +20,11 @@ html
         #navbar.collapse.navbar-collapse
           ul.nav.navbar-nav.navbar-right#menu
             li.active
-              a(href='#') Demoreel
+              a(href='/') Demoreel
             li
               a(href='#blog') Blog
             li
-              a(href='#work') Work    
+              a(href='/work') Work    
     div.container
       hr
     block content

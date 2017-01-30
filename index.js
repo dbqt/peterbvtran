@@ -17,7 +17,7 @@ app.get('/', function(request, response) {
 });
 */
 app.use('/', index);
-app.use('/users', users);
+//app.use('/users', users);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

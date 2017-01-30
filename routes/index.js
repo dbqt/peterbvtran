@@ -6,4 +6,8 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Peter Binh Vinh Tran' });
 });
 
+router.get('/work', function(req, res, next) {
+  res.render('work', { title: 'Peter Binh Vinh Tran' });
+});
+
 module.exports = router;

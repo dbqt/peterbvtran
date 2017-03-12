@@ -2,7 +2,13 @@ var express = require('express');
 var app = express();
 
 var index = require('./routes/index');
+var ajax = require('./routes/ajax');
 var users = require('./routes/users');
+
+var db = require('./lib/db');
+var mongoose = require( 'mongoose' );
+var Blog = mongoose.model( 'Blog' );
+var DetailedImage = mongoose.model( 'DetailedImage' );
 
 app.set('port', (process.env.PORT || 5000));
 
@@ -17,6 +23,7 @@ app.get('/', function(request, response) {
 });
 */
 app.use('/', index);
+app.use('/api', ajax);
 //app.use('/users', users);
 
 // catch 404 and forward to error handler

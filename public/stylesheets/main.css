@@ -1,5 +1,5 @@
 body {
-  background-color: #333;
+  background-color: #111;
   color: white;
 }
 
@@ -44,7 +44,7 @@ a {
   width: 22px;
   height: 2px;
   border-radius: 1px;
-  background-color: #333;
+  background-color: #111;
 }
 .navbar-button .icon-bar + .icon-bar {
   margin-top: 4px;
@@ -86,7 +86,7 @@ a {
 /* ---- grid ---- */
 
 .grid {
-  background: #333;
+  background: #111;
 }
 
 /* clear fix */
@@ -129,7 +129,7 @@ a {
 
 /*Carousel*/
 .carousel {
-  background: #333;
+  background: #111;
   margin-bottom: 40px;
   width: 100%;
 }
@@ -140,6 +140,24 @@ a {
   width: 100%;
   overflow: hidden;
   counter-increment: carousel-cell;
+}
+
+.carousel-cell .desc-cell {
+  visibility: hidden;
+  position: absolute;
+  width: 100%;
+  z-index: 2;
+  background: -moz-linear-gradient(top, rgba(128,128,128,0.15) 0%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba(128,128,128,0.15) 0%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgba(128,128,128,0.15) 0%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
+.carousel-cell:hover .desc-cell {
+  visibility: visible;
+}
+
+.carousel-cell .desc-cell p {
+ margin: 10px;
 }
 
 .carousel-cell img {

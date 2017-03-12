@@ -5,4 +5,5 @@ block content
   div.container
     p Blog
     div#entries
-      p test
+      for post in {blog}
+        p #{post.title}

@@ -16,9 +16,9 @@ router.get('/blog', function(req, res, next) {
 /*
 
   http.get({}, function(resp){
-    resp.on('data', function(chunk){
+    resp.on('data', function(blog){
       //do something with chunk
-      res.render('blog');
+      res.render('blog', blog);
     });
   }).on("error", function(e){
     console.log("Got error: " + e.message);

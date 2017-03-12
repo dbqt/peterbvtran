@@ -5,5 +5,11 @@ block content
   div.container
     p Blog
     div#entries
-      for post in {blog}
-        p #{post.title}
+      for post in blog
+        div.entry
+          h2 #{post.title}
+          p #{post.date}
+          p #{post.text}
+          for img in post.imgs
+            p #{img.description}
+            img(src=img.imgUrl)

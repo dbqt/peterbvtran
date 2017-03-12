@@ -1,5 +1,5 @@
 var express = require('express');
-var http = require('http');
+var requestify = require('requestify'); ;
 var router = express.Router();
 
 /* GET home page. */
@@ -13,17 +13,12 @@ router.get('/work', function(req, res, next) {
 
 router.get('/blog', function(req, res, next) {
 
-/*
-
-  http.get({}, function(resp){
-    resp.on('data', function(blog){
-      //do something with chunk
-      res.render('blog', blog);
-    });
-  }).on("error", function(e){
-    console.log("Got error: " + e.message);
+  requestify.get('https://peterbvtran.herokuapp.com/api/blog').then(function(response) {
+    // Get the response body (JSON parsed - JSON response or jQuery object in case of XML response)
+    var entries = response.getBody();
+    console.log(entries.length);
+    res.render('blog', {nb: entries.length, blog: entries});
   });
-*/
   
 });
 

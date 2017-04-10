@@ -22,6 +22,7 @@ app.get('/', function(request, response) {
   response.render('pages/index');
 });
 */
+// where to route requests
 app.use('/', index);
 app.use('/api', ajax);
 //app.use('/users', users);

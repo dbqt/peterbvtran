@@ -32,6 +32,11 @@ router.get('/blog', function(req, res, next){
 
 router.post('/blog', function(req, res, next) {
 
+  if(req.body.code != "a"){
+    res.sendStatus(401);
+    return;
+  }
+
   // get all imgs
   var allImgs = [];
   req.body.imgs.forEach(function(element) {

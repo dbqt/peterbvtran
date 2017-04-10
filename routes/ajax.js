@@ -21,10 +21,12 @@ router.get('/work', function(req, res, next) {
 router.get('/blog', function(req, res, next){
   // get all blogs
   Blog.find(function(err, data) {
+    
     if(err){
       res.status(500).send(err);
       console.log(err);
     } else {
+      console.log(data);
       res.json(data);
     }
   })

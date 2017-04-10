@@ -32,6 +32,7 @@ router.get('/blog', function(req, res, next){
 
 router.post('/blog', function(req, res, next) {
 
+  // hardcoded password...
   if(req.body.code != "a"){
     res.sendStatus(401);
     return;

@@ -21,25 +21,15 @@ router.get('/blog', function(req, res, next) {
     // Get the response body (JSON parsed - JSON response or jQuery object in case of XML response)
     var entries = response.getBody();
     // sort by date
-    entries.sort( predicateBy("date") );
-    //onsole.log(entries);
+    entries.sort(function(a,b) { 
+        return new Date(a.date).getTime() - new Date(b.date).getTime() 
+    });
+    entries.reverse();
+
     res.render('blog', {nb: entries.length, blog: entries});
   });
   
 });
-
-
-// used to sort stuff
-function predicateBy(prop){
-   return function(a,b){
-      if( a[prop] > b[prop]){
-          return 1;
-      }else if( a[prop] < b[prop] ){
-          return -1;
-      }
-      return 0;
-   }
-}
 
 
 module.exports = router;

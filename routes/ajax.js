@@ -34,6 +34,7 @@ router.get('/blog', function(req, res, next){
 
 router.post('/blog', function(req, res, next) {
 
+  console.log("code is " + req.body.code);
   // hardcoded password...
   if(req.body.code != "a"){
     res.sendStatus(401);
@@ -43,7 +44,9 @@ router.post('/blog', function(req, res, next) {
   // get all imgs
   var allImgs = [];
   req.body.imgs.forEach(function(element) {
-    allImgs.push({imgUrl : element.imgUrl, description: element.description});
+    if(element.imgUrl != "") {
+      allImgs.push({imgUrl : element.imgUrl, description: element.description});
+    }
   }, this);
 
   //create new blog

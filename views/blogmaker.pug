@@ -2,20 +2,21 @@ extends layout
 
 block content
   
-  div.container
-    p Blog Maker
+  div.container#blogmaker
+    h2 Blog Maker
     div
-      form
+      form#blog-form
         p
           label Title
-          input(type='text')
+          input#blog-title(type='text')
         p
           label Date
-          input(type='date')
+          input#blog-date(type='date')
         p
           label Content
         p
-          textarea
+          textarea#blog-text
+        h4 Images
         div#images
           div#image
             p
@@ -25,14 +26,12 @@ block content
               label Description
               input(type='text')
         p
-          button Add Image
-          // todo: add js to handle adding more img fields
+          button#add-image-btn.btn Add Image
+          button#del-image-btn.btn Remove Image
         p
           label Secret Code
-          input(type='text')
+          input#secret-code(type='text')
         p
-          button Post
-        
-        // todo: add js to handle post to /blog
+          button#post-btn.btn Post
 
-    
+  script(src="/javascripts/blogmaker.js")  

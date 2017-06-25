@@ -1,6 +1,7 @@
 body {
   background-color: #111;
   color: white;
+  font-family: 'Titillium Web', sans-serif; 
 }
 
 a {
@@ -213,4 +214,48 @@ a {
   height: 100%;
 }
 
+#blogmaker {
+  background-color: rgb(200,200,200);
+  border-radius: 8px;
+  color: black;
+}
+
+#blogmaker label {
+  margin: 8px;
+}
+
+#blogmaker > * {
+  margin: 8px;
+}
+
+#blog-form > p > textarea, button {
+  margin-left: 8px;
+  margin-right: 24px;
+}
+
+#blog-form > p > button {
+  background-color: white;
+}
+
+#blog-form > p > textarea {
+  min-width: 75%;
+  max-width: 95%;
+}
+
+#image {
+  border: 1px solid black;
+  border-radius: 8px;
+  padding: 8px;
+  margin: 8px;
+}
+
+#image > p {
+  margin: 0px;
+  padding: 0px;
+}
+
+#blog img {
+  height: 50vh;
+  width: auto;
+}
 

@@ -5,6 +5,8 @@ var bodyParser = require('body-parser');
 var db = require('../lib/db.js')
 var mongoose = require( 'mongoose' );
 var Blog = mongoose.model( 'Blog' );
+var Showcase = mongoose.model( 'Showcase' );
+var Gallery = mongoose.model( 'Gallery' );
 var DetailedImage = mongoose.model('DetailedImage');
 
 router.use(bodyParser.json()); // for parsing application/json
@@ -95,5 +97,33 @@ router.post('/blog', function(req, res, next) {
   });
 
 });
+
+function initGallery() {
+
+  var img = [];
+  img.push({imgUrl : "", description: ""});
+
+  new Gallery({
+    imgs : img
+  }).save(function(err){
+    if(err) {
+      console.log(err);
+    }
+  });
+}
+
+function initShowcase() {
+
+  var img = [];
+  img.push({imgUrl : "", description: ""});
+
+  new Showcase({
+    imgs : img
+  }).save(function(err){
+    if(err) {
+      console.log(err);
+    }
+  });
+}
 
 module.exports = router;

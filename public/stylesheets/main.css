@@ -102,6 +102,7 @@ a {
 .grid-sizer,
 .grid-item {
   width: 100%;
+  margin: 1px;
 }
 
 @media (min-width: 768px) {
@@ -114,7 +115,7 @@ a {
 @media (min-width: 1024px) {
   .grid-sizer,
   .grid-item {
-    width: 33.33%;
+    width: 33%;
   }
 }
 
@@ -171,11 +172,12 @@ a {
 
 @media screen and ( min-width: 768px ) {
   .carousel-cell img {
-    height: 400px;
+    height: 70vh;
   }
 }
 
 .carousel-nav .carousel-cell {
+  bottom: 0;
   height: 80px;
   width: 100px;
   background: dodgerblue;
@@ -258,4 +260,27 @@ a {
   height: 50vh;
   width: auto;
 }
+
+#main-footer {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.full-page {
+  position: fixed;
+  top: 0;
+  z-index: -5;
+  width: 100%;
+}
+
+.transparent-gray {
+  background-color: rgba(0,0,0,0.7);
+}
+
+.no-margin {
+  margin: 0;
+}
+
 

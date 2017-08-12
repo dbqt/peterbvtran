@@ -3,12 +3,11 @@ extends layout
 block content
   
   div.container
-    p Welcome to #{title}
     div.grid
-      each val in [1, 2, 3, 4, 5]
+      for img in gallery.imgs
         div.grid-sizer
         div.grid-item
           a(href="#")
-            img(src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/orange-tree.jpg")
+            img(src=img.imgUrl)
 
   script(src="/javascripts/gallery.js")

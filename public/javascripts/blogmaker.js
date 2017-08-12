@@ -36,8 +36,15 @@ function postBlog() {
 		type: "POST",
 		url: "/api/blog",
 		data: jsonString,
-		contentType : 'application/json'
+		contentType : 'application/json',
+		success: function (data, textStatus, XmlHttpRequest) {
+                    alert("Blog post created!")
+                },
+                error: function (XMLHttpRequest, textStatus, errorThrown) {
+                    alert("Error: "+errorThrown);
+                }
 	});
+
 }
 
 function addImage() {

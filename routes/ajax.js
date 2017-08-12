@@ -32,11 +32,39 @@ router.get('/blog', function(req, res, next){
   })
 });
 
+router.get('/gallery', function(req, res, next){
+  // get all blogs
+  Gallery.find(function(err, data) {
+    
+    if(err){
+      res.status(500).send(err);
+      console.log(err);
+    } else {
+      console.log(data);
+      res.json(data);
+    }
+  })
+});
+
+router.get('/showcase', function(req, res, next){
+  // get all blogs
+  Showcase.find(function(err, data) {
+    
+    if(err){
+      res.status(500).send(err);
+      console.log(err);
+    } else {
+      console.log(data);
+      res.json(data);
+    }
+  })
+});
+
 router.post('/blog', function(req, res, next) {
 
   console.log("code is " + req.body.code);
   // hardcoded password...
-  if(req.body.code != "a"){
+  if(req.body.code != "4545645"){
     res.sendStatus(401);
     return;
   }

@@ -12,7 +12,7 @@ router.get('/', function(req, res, next) {
     res.render('index', {showcase: showreel});
   })
   .fail(function(err) {
-		console.log(err.getBody()); // Some error code such as, for example, 404
+		console.log("Error in get home with " + err.getBody()); // Some error code such as, for example, 404
 	});
  // res.render('index', {showcase: showreel});
 });
@@ -26,7 +26,7 @@ router.get('/work', function(req, res, next) {
     res.render('work', {gallery: galleryImgs});
   })
   .fail(function(err) {
-		console.log(err.getBody()); // Some error code such as, for example, 404
+		console.log("Error in get work with " + err.getBody()); // Some error code such as, for example, 404
 	});
  //res.render('work', {gallery: galleryImgs});
 
@@ -51,7 +51,7 @@ router.get('/blog', function(req, res, next) {
     res.render('blog', {nb: entries.length, blog: entries});
   })
   .fail(function(err) {
-		console.log(err.getBody()); // Some error code such as, for example, 404
+		console.log("Error in get blog with " + err.getBody()); // Some error code such as, for example, 404
 	});
   
 });

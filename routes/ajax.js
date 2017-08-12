@@ -46,6 +46,7 @@ router.get('/gallery', function(req, res, next){
       res.json(data);
     }
   })
+
 });
 
 router.get('/showcase', function(req, res, next){

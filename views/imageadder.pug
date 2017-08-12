@@ -1,0 +1,43 @@
+extends layout
+
+block content
+  
+  div.container#blogmaker
+    h2 Image Adder
+    div
+      ul#gallery
+        for img in existingGallery.imgs
+          li
+            img(src=img.imgUrl)
+    div
+      form#blog-form
+        p
+          label Title
+          input#blog-title(type='text')
+        p
+          label Date
+          input#blog-date(type='date')
+        p
+          label Content
+        p
+          textarea#blog-text
+        h4 Images
+        div#images
+          div#image
+            p
+              label URL
+              input(type='text')
+            p
+              label Description
+              input(type='text')
+        p
+          button#add-image-btn.btn Add Image
+          button#del-image-btn.btn Remove Image
+        p
+          label Secret Code
+          input#secret-code(type='password')
+        p
+          button#post-btn.btn Save
+
+  script(src="//cdnjs.cloudflare.com/ajax/libs/Sortable/1.6.0/Sortable.min.js")
+  script(src="/javascripts/imageadder.js")  

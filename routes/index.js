@@ -36,6 +36,20 @@ router.get('/blogmaker', function(req, res, next) {
   res.render('blogmaker', { title: 'Peter Binh Vinh Tran' });
 });
 
+router.get('/imageadder', function(req, res, next) {
+
+  requestify.get('https://peterbvtran.herokuapp.com/api/gallery')
+  .then(function(response) {
+    // Get the response body (JSON parsed - JSON response or jQuery object in case of XML response)
+   var galleryImgs = response.getBody();
+   res.render('imageadder', { existingGallery: galleryImgs[0] });
+  })
+  .fail(function(err) {
+		console.log("Error in get imageadder with " + err.getBody()); // Some error code such as, for example, 404
+	});
+  
+});
+
 router.get('/blog', function(req, res, next) {
 
   requestify.get('https://peterbvtran.herokuapp.com/api/blog')

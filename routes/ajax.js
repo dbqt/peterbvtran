@@ -25,8 +25,8 @@ router.get('/blog', function(req, res, next){
   Blog.find(function(err, data) {
     
     if(err){
-      res.status(500).send(err);
       console.log(err);
+      res.status(500).send(err);
     } else {
       console.log(data);
       res.json(data);
@@ -39,8 +39,8 @@ router.get('/gallery', function(req, res, next){
   Gallery.find(function(err, data) {
     
     if(err){
-      res.status(500).send(err);
       console.log(err);
+      res.status(500).send(err);
     } else {
       console.log(data);
       res.json(data);
@@ -53,8 +53,8 @@ router.get('/showcase', function(req, res, next){
   Showcase.find(function(err, data) {
     
     if(err){
-      res.status(500).send(err);
       console.log(err);
+      res.status(500).send(err);
     } else {
       console.log(data);
       res.json(data);
@@ -88,8 +88,8 @@ router.post('/blog', function(req, res, next) {
     imgs : allImgs
   }).save(function(err){
     if(err) {
-      res.send(err); 
       console.log(err);
+      res.send(err); 
     }
     else { 
       res.sendStatus(201);

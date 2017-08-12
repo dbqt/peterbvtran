@@ -9,7 +9,7 @@ router.get('/', function(req, res, next) {
   .then(function(response) {
     // Get the response body (JSON parsed - JSON response or jQuery object in case of XML response)
     var showreel = response.getBody();
-    res.render('index', {showcase: showreel});
+    res.render('index', {showcase: showreel[0]});
   })
   .fail(function(err) {
 		console.log("Error in get home with " + err.getBody()); // Some error code such as, for example, 404

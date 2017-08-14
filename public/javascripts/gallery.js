@@ -9,3 +9,5 @@ imagesLoaded( grid, function() {
     percentPosition: true
   });
 });
+
+new LuminousGallery(document.querySelectorAll('.imagePop'));

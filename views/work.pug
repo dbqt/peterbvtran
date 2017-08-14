@@ -1,13 +1,15 @@
 extends layout
 
 block content
-  
+
   div
     div.grid
       for img in gallery.imgs
-        div.grid-sizer
+        //div.grid-sizer
         div.grid-item
-          a(href="#")
-            img(src=img.imgUrl)
+          a.imagePop(href=img.imgUrl)
+            img.galleryImg(src=img.imgUrl)
 
+  script(src="https://cdnjs.cloudflare.com/ajax/libs/luminous-lightbox/1.0.1/Luminous.min.js")
+  
   script(src="/javascripts/gallery.js")

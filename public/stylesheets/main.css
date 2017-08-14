@@ -28,6 +28,10 @@ a {
   margin: auto;
 }
 
+.navbar {
+  border-radius: 0px;y
+}
+
 .navbar-button {
   position: relative;
   padding: 9px 10px;
@@ -101,21 +105,26 @@ a {
 
 .grid-sizer,
 .grid-item {
-  width: 100%;
+  position: relative;
+  width: 100vw;
   margin: 1px;
+  text-align: center;
+  overflow: hidden;
 }
 
 @media (min-width: 768px) {
   .grid-sizer,
   .grid-item {
-    width: 50%;
+    width: 50vw;
+    height: 50vw;
   }
 }
 
 @media (min-width: 1024px) {
   .grid-sizer,
   .grid-item {
-    width: 33%;
+    width: 32vw;
+    height: 32vw;
   }
 }
 
@@ -124,10 +133,15 @@ a {
 }
 
 .grid-item img {
-  display: block;
-  max-width: 100%;
+  max-height: 110%;
+  min-width: 100%; 
+  position: absolute;
+  top: -9999px;
+  bottom: -9999px;
+  left: -9999px;
+  right: -9999px;
+  margin: auto; 
 }
-
 
 /*Carousel*/
 .carousel {

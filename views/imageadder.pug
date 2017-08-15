@@ -5,23 +5,27 @@ block content
   div.container#blogmaker
     h2 Image Adder
     div
-      ul#gallery
-        for img in existingGallery.imgs
-          li
-            img(src=img.imgUrl)
-    div
-      form#blog-form
+      form#showcase-form
         p
-          label Title
-          input#blog-title(type='text')
+          label Add image to showcase
+          input#showcase-img(type='text')
         p
-          label Date
-          input#blog-date(type='date')
+          label Secret Code
+          input#secret-code(type='password')
         p
-          label Content
+          button#showcase-post-btn.btn Upload image to showcase
+
+
+      hr
+      form#gallery-form
         p
-          textarea#blog-text
-        h4 Images
+          label Title of gallery
+          input#gallery-name(type='text')
+
+        p
+          label Add cover of gallery
+          input#gallery-img(type='text')
+
         div#images
           div#image
             p
@@ -37,7 +41,7 @@ block content
           label Secret Code
           input#secret-code(type='password')
         p
-          button#post-btn.btn Save
+          button#gallery-post-btn.btn Upload album to gallery
 
   script(src="//cdnjs.cloudflare.com/ajax/libs/Sortable/1.6.0/Sortable.min.js")
   script(src="/javascripts/imageadder.js")  

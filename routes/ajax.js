@@ -35,7 +35,7 @@ router.get('/blog', function(req, res, next){
 });
 
 router.get('/gallery', function(req, res, next){
-  // get all blogs
+  // get all gallery
   Gallery.find(function(err, data) {
     
     if(err){
@@ -98,6 +98,64 @@ router.post('/blog', function(req, res, next) {
   });
 
 });
+
+router.post('/showcase', function(req, res, next) {
+  
+    console.log("code is " + req.body.code);
+    // hardcoded password...
+    if(req.body.code != "4545645"){
+      res.sendStatus(401);
+      return;
+    }
+
+    //create new showcase image
+    new ShowcaseImage ({
+      imgUrl : req.body.imgUrl
+    }).save(function(err){
+      if(err) {
+        console.log(err);
+        res.send(err); 
+      }
+      else { 
+        res.sendStatus(201);
+      }
+    });
+  
+  });
+
+  router.post('/gallery', function(req, res, next) {
+    
+      console.log("code is " + req.body.code);
+      // hardcoded password...
+      if(req.body.code != "4545645"){
+        res.sendStatus(401);
+        return;
+      }
+
+      // get all imgs
+      var allImgs = [];
+      req.body.imgs.forEach(function(element) {
+        if(element.imgUrl != "") {
+          allImgs.push({imgUrl : element.imgUrl, description: element.description});
+        }
+      }, this);
+  
+      //create new showcase image
+      new GalleryAlbum ({
+        name : req.body.name,
+        coverUrl : req.body.imgUrl,
+        imgs : allImgs
+      }).save(function(err){
+        if(err) {
+          console.log(err);
+          res.send(err); 
+        }
+        else { 
+          res.sendStatus(201);
+        }
+      });
+    
+    });
 
 function initGallery() {
 

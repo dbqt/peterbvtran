@@ -28,10 +28,9 @@ function albumclick(album) {
     allImgs = JSON.parse(album.getAttribute("data-album"));
 
     var name = document.createElement("H2");
-    var description = document.createElement("P");
-
-    name.value = allImgs.name;
-    description.value = allImgs.description;
+    var nameText = document.createTextNode(allImgs.name);
+    var description = document.createTextNode(allImgs.description);
+    name.appendChild(nameText);
 
     modalContent.appendChild(name);
     modalContent.appendChild(description);

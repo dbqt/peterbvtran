@@ -23,7 +23,7 @@ router.get('/work', function(req, res, next) {
   .then(function(response) {
     // Get the response body (JSON parsed - JSON response or jQuery object in case of XML response)
    var galleryImgs = response.getBody();
-    res.render('work', {gallery: galleryImgs[0]});
+    res.render('work', {gallery: galleryImgs});
   })
   .fail(function(err) {
 		console.log("Error in get work with " + err.getBody()); // Some error code such as, for example, 404

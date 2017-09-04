@@ -38,7 +38,7 @@ router.get('/blog', function(req, res, next){
 
 router.get('/gallery', function(req, res, next){
   // get all gallery
-  Gallery.find(function(err, data) {
+  GalleryAlbum.find(function(err, data) {
     
     if(err){
       console.log(err);

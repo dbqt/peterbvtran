@@ -4,11 +4,11 @@ block content
 
   div
     div.grid
-      for img in gallery.imgs
+      for album in gallery
         //div.grid-sizer
         div.grid-item
-          a.imagePop(href=img.imgUrl)
-            img.galleryImg(src=img.imgUrl)
+          a.imagePop(href=album.coverUrl)
+            img.galleryImg(src=album.coverUrl)
 
   script(src="https://cdnjs.cloudflare.com/ajax/libs/luminous-lightbox/1.0.1/Luminous.min.js")
   

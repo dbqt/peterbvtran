@@ -6,6 +6,7 @@ var db = require('../lib/db.js')
 var mongoose = require( 'mongoose' );
 var Blog = mongoose.model( 'Blog' );
 var Showcase = mongoose.model( 'Showcase' );
+var ShowcaseImage = mongoose.model( 'ShowcaseImage' );
 var Gallery = mongoose.model( 'Gallery' );
 var GalleryAlbum = mongoose.model( 'GalleryAlbum' );
 var DetailedImage = mongoose.model('DetailedImage');

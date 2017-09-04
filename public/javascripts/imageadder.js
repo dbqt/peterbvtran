@@ -20,7 +20,7 @@ function postGallery() {
   var obj = new Object();
   obj.name = document.getElementById("gallery-name").value;
   obj.imgUrl = document.getElementById("gallery-img").value;
-  obj.code = document.getElementById("secret-code").value;
+  obj.code = document.getElementById("secret-code-gallery").value;
 
   // generate array of images
 	var allImgs = document.getElementById("images").children;

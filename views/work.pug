@@ -4,12 +4,20 @@ block content
 
   div
     div.grid
+      div.grid-sizer
       for album in gallery
         //div.grid-sizer
         div.grid-item
-          a.imagePop(href=album.coverUrl)
+          a.imagePop(data-album=album onclick="albumclick(this)" href="#modalAlbum")
             img.galleryImg(src=album.coverUrl)
 
-  script(src="https://cdnjs.cloudflare.com/ajax/libs/luminous-lightbox/1.0.1/Luminous.min.js")
-  
+  div.custom-modal#modalAlbum
+    div.custom-modal-content(style="background-color: #111;")
+      span.close(style="color: white") &#10006;
+      br
+      br
+      div#custom-modal-content-album
+
+  //script(src="https://cdnjs.cloudflare.com/ajax/libs/luminous-lightbox/1.0.1/Luminous.min.js")
+  script(src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js")
   script(src="/javascripts/gallery.js")

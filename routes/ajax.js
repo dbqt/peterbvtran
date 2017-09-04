@@ -145,6 +145,7 @@ router.post('/showcase', function(req, res, next) {
       //create new showcase image
       new GalleryAlbum ({
         name : req.body.name,
+        description : req.body.description,
         coverUrl : req.body.imgUrl,
         imgs : allImgs
       }).save(function(err){

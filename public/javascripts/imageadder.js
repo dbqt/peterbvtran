@@ -19,6 +19,7 @@ function postGallery() {
 	// create object using form elements
   var obj = new Object();
   obj.name = document.getElementById("gallery-name").value;
+  obj.description = document.getElementById("gallery-description").value;
   obj.imgUrl = document.getElementById("gallery-img").value;
   obj.code = document.getElementById("secret-code-gallery").value;
 

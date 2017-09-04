@@ -52,8 +52,8 @@ router.get('/gallery', function(req, res, next){
 });
 
 router.get('/showcase', function(req, res, next){
-  // get all blogs
-  Showcase.find(function(err, data) {
+  // get all imgs
+  ShowcaseImage.find(function(err, data) {
     
     if(err){
       console.log(err);

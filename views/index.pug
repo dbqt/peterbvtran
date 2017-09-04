@@ -4,14 +4,14 @@ block content
   
   div.full-page
     .carousel.carousel-main
-      for img in showcase.imgs
+      for img in showcase
         .carousel-cell
           .cell-desc 
             p #{img.description}
           img(src=img.imgUrl)
 
     .carousel.carousel-nav(data-flickity='{ "asNavFor": ".carousel-main", "contain": true, "pageDots": false }')
-      for img in showcase.imgs
+      for img in showcase
         .carousel-cell
           img(src=img.imgUrl)
 

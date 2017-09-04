@@ -29,7 +29,7 @@ app.use('/api', ajax);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
-  var err = new Error(req.baseUrl + ' was Not Found');
+  var err = new Error(req.baseUrl + ' was Not Found : '+ req);
   err.status = 404;
   next(err);
 });

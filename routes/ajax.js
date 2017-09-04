@@ -7,6 +7,7 @@ var mongoose = require( 'mongoose' );
 var Blog = mongoose.model( 'Blog' );
 var Showcase = mongoose.model( 'Showcase' );
 var Gallery = mongoose.model( 'Gallery' );
+var GalleryAlbum = mongoose.model( 'GalleryAlbum' );
 var DetailedImage = mongoose.model('DetailedImage');
 
 router.use(bodyParser.json()); // for parsing application/json
@@ -170,6 +171,22 @@ function initGallery() {
     }
   });
 }
+
+function initAlbum() {
+  
+    var img = [];
+    img.push({imgUrl : "", description: ""});
+  
+    new GalleryAlbum({
+      name : "name",
+      coverUrl : "",
+      imgs : img
+    }).save(function(err){
+      if(err) {
+        console.log(err);
+      }
+    });
+  }
 
 function initShowcase() {
 

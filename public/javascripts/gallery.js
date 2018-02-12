@@ -30,17 +30,28 @@ function albumclick(album) {
     var name = document.createElement("H2");
     var nameText = document.createTextNode(allImgs.name);
     var description = document.createTextNode(allImgs.description);
+    var line = document.createElement("HR");
+      
     name.appendChild(nameText);
 
     modalContent.appendChild(name);
     modalContent.appendChild(description);
+    modalContent.appendChild(line);
 
     console.log(allImgs);
     allImgs.imgs.forEach(function(element) {
+      console.log(element);
+      var desc = document.createTextNode(element.description);
+      var descNode = document.createElement("P");
+      descNode.setAttribute("style", "text-align:center");
+      descNode.appendChild(desc);
+      modalContent.appendChild(descNode);
+
       var x = document.createElement("IMG");
       x.setAttribute("src", element.imgUrl);
       x.setAttribute("width", "100%");
       modalContent.appendChild(x);
+
       var br = document.createElement("P");
       modalContent.appendChild(br);
       

@@ -231,6 +231,10 @@ a {
   height: 100%;
 }
 
+.carousel-nav .flickity-prev-next-button {
+  display: none;
+}
+
 #blogmaker {
   background-color: rgb(200,200,200);
   border-radius: 8px;

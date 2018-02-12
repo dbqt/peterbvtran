@@ -3,6 +3,13 @@ extends layout
 block content
   
   div.full-page
+    br
+    br
+    br
+    br
+    br
+    br
+
     .carousel.carousel-main
       for img in showcase
         .carousel-cell
@@ -16,8 +23,8 @@ block content
           img(src=img.imgUrl)
 
     div.container
-      a(href="/work")
-        h3 View full portfolio
+      a.btn#custom-button(href="/work")
+        h2(style="text-align:center") View full portfolio
   script(src="/javascripts/carousel.js")
 
   

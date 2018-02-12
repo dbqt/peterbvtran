@@ -40,7 +40,6 @@ function albumclick(album) {
 
     console.log(allImgs);
     allImgs.imgs.forEach(function(element) {
-      console.log(element);
       var desc = document.createTextNode(element.description);
       var descNode = document.createElement("P");
       descNode.setAttribute("style", "text-align:center");

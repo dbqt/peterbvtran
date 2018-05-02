@@ -17,11 +17,6 @@ block content
             p #{img.description}
           img(src=img.imgUrl)
 
-    .carousel.carousel-nav(data-flickity='{ "asNavFor": ".carousel-main", "contain": true, "pageDots": false }')
-      for img in showcase
-        .carousel-cell
-          img(src=img.imgUrl)
-
     div.container
       a.btn#custom-button(href="/work")
         h2(style="text-align:center") View full portfolio

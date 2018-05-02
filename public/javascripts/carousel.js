@@ -2,6 +2,7 @@ var carousel = document.querySelector('.carousel');
 var flkty = new Flickity( carousel, {
   imagesLoaded: true,
   percentPosition: false,
+  autoPlay: false
 });
 
 var imgs = carousel.querySelectorAll('.carousel-cell img');

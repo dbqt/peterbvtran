@@ -8,6 +8,14 @@ a {
   color: #AAA;
 }
 
+.right{
+  float:right;
+}
+
+.left{
+  float:left;
+}
+
 .navigation-clean-button {
   background:transparent;
   padding-top:10px;
@@ -344,4 +352,16 @@ a {
     background-color: white;
 }
 
+
+/* OVERWRITE */
+
+.flickity-page-dots {
+  bottom: auto;
+  padding: 8px;
+}
+
+.flickity-page-dots .dot {
+  width: 20px;
+  height: 20px;
+}
 

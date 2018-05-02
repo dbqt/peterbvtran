@@ -3,8 +3,9 @@ html
   head
     title= title
     link(rel="stylesheet" href="/bootstrap/bootstrap.min.css")
-    link(rel='stylesheet' type="text/css" href="/stylesheets/main.css")
+    
     link(rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css")
+    link(rel='stylesheet' type="text/css" href="/stylesheets/main.css")
     link(href='https://fonts.googleapis.com/css?family=Titillium+Web:300,700' rel='stylesheet' type='text/css')
     //link(href='https://cdnjs.cloudflare.com/ajax/libs/luminous-lightbox/1.0.1/luminous-basic.min.css' rel='stylesheet' type='text/css')
 
@@ -18,8 +19,8 @@ html
     nav.navbar.transparent-gray.no-margin#main-header
       .container
         .navbar-header#title
-          h3 Peter Binh-Vinh Tran
-          p 3D Environment Artist
+          h3(style="font-weight:bold") PETER BINH-VINH TRAN
+          p LIGHTING ARTIST
         button.navbar-button.collapsed.centered(type='button', data-toggle='collapse', data-target='#navbar', aria-expanded='false', aria-controls='navbar')
             span.icon-bar
             span.icon-bar
@@ -45,5 +46,11 @@ html
     footer#main-footer.transparent-gray
       div.container
         hr
-        p peter.bv.tran@outlook.com | 
-          a(href="https://www.linkedin.com/in/peterbvtran/") LinkedIn
+        span.left peter.bv.tran@outlook.com  |  1+514-576-6332
+        span.right
+          span
+            a(href="https://www.linkedin.com/in/peterbvtran/")
+              img(src="/imgs/In-White.png", alt="LinkedIn link", height="24px", style="display:inline; margin-right:8px;")
+            a(href="https://www.linkedin.com/in/peterbvtran/")
+              img(src="/imgs/Cv-White.png", alt="LinkedIn link", height="24px", style="display:inline")
+          

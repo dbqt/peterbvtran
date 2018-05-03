@@ -195,7 +195,7 @@ a {
 
 @media screen and ( min-width: 768px ) {
   .carousel-cell img {
-    height: 55vh;
+    height: 62vh;
   }
 }
 
@@ -357,7 +357,7 @@ a {
 
 .flickity-page-dots {
   bottom: auto;
-  padding: 8px;
+  padding: 15px;
 }
 
 .flickity-page-dots .dot {

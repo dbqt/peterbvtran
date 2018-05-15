@@ -51,6 +51,21 @@ router.get('/gallery', function(req, res, next){
 
 });
 
+router.get('/gallery/:index', function(req, res, next){
+  // get all gallery
+  GalleryAlbum.find(function(err, data) {
+    
+    if(err){
+      console.log(err);
+      res.status(500).send(err);
+    } else {
+      console.log(data);
+      res.json(data[index]);
+    }
+  })
+
+});
+
 router.get('/showcase', function(req, res, next){
   // get all imgs
   ShowcaseImage.find(function(err, data) {

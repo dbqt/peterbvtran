@@ -10,12 +10,16 @@ block content
     br
     br
 
+    - i = 0
     .carousel.carousel-main
       for img in showcase
         .carousel-cell
           .cell-desc 
             p #{img.description}
-          img(src=img.imgUrl)
+          img(src=img.imgUrl onclick="imgClick("+i+")" style="cursor: pointer;")
+      
+        - i += 1
+      
 
     //div.container
       a.btn#custom-button(href="/work")

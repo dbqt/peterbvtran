@@ -1,6 +1,8 @@
 var grid = document.querySelector('.grid');
 var msnry;
 
+notIE=document.getElementById&&!document.all
+
 $(document).ready(function(){
   // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
   $('.modal').modal();
@@ -17,22 +19,30 @@ imagesLoaded( grid, function() {
 
 // Get the modal
 var modal = document.getElementById('modalAlbum');
-var modalContent = document.getElementById('custom-modal-content-album');
+//document.getElementById('custom-modal-content-album');
 
 function albumclick(album) {
 
-    while(modalContent.firstChild) {
-      modalContent.removeChild(modalContent.firstChild);
-    }
+    //allImgs = JSON.parse(album.getAttribute("data-album"));
+    
+    var w = window.open("project/"+album.getAttribute("index"));
+    /*var modalContent = w.document.createElement("DIV");
+    modalContent.className = "project_content_core";
 
-    allImgs = JSON.parse(album.getAttribute("data-album"));
+   
+    
+    
 
-    var name = document.createElement("H2");
-    var nameText = document.createTextNode(allImgs.name);
-    var description = document.createTextNode(allImgs.description);
-    var line = document.createElement("HR");
+    
+
+    var name = w.document.createElement("H2");
+    var nameText = w.document.createTextNode(allImgs.name);
+    var description = w.document.createElement("P");
+    var descriptionText = w.document.createTextNode(allImgs.description);
+    var line = w.document.createElement("HR");
       
     name.appendChild(nameText);
+    description.appendChild(descriptionText);
 
     modalContent.appendChild(name);
     modalContent.appendChild(description);
@@ -40,22 +50,43 @@ function albumclick(album) {
 
     console.log(allImgs);
     allImgs.imgs.forEach(function(element) {
-      var desc = document.createTextNode(element.description);
-      var descNode = document.createElement("P");
+      var desc = w.document.createTextNode(element.description);
+      var descNode = w.document.createElement("P");
       descNode.setAttribute("style", "text-align:center");
       descNode.appendChild(desc);
       modalContent.appendChild(descNode);
 
-      var x = document.createElement("IMG");
+      var x = w.document.createElement("IMG");
       x.setAttribute("src", element.imgUrl);
       x.setAttribute("width", "100%");
       modalContent.appendChild(x);
 
-      var br = document.createElement("P");
+      var br = w.document.createElement("BR");
       modalContent.appendChild(br);
+      modalContent.appendChild(br);
+      modalContent.appendChild(br);
+      modalContent.appendChild(br);
+      modalContent.appendChild(br);
+      console.log("before");
+      console.log(modalContent);
+
+      if(notIE){
+        w.onload=function(){
+          w.document.getElementById("project_content").appendChild(modalContent) 
+          console.log("after");
+          console.log(w.document);
+        }
+        
+        }
+      else{
+        
+        if(w.document.readyState=="complete"){
+          w.document.body.appendChild(modalContent) 
+        }
+      }
       
     }, this);
-    modal.style.display = "block";
+    //modal.style.display = "block";*/
 }
 
 

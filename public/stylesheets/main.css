@@ -147,18 +147,7 @@ a {
 .albumCover {
   position: relative;
   margin: auto;
-}
-
-@media (min-width: 768px) {
-  .albumCover {
-    width: 70vw;
-  }
-}
-
-@media (min-width: 1024px) {
-  .albumCover {
-    width: 90vw;
-  }
+  width: 99vw;
 }
 
 .albumCover img {
@@ -331,6 +320,18 @@ a {
   margin: 0;
 }
 
+/* project content */
+
+.project_content_core h2{
+  text-align: center;
+}
+.project_content_core p{
+  text-align: center;
+}
+
+.project_content_core img {
+  width: 99vw;
+}
 /* MODAL */
 /* The Modal (background) */
 .custom-modal {

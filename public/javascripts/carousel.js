@@ -20,3 +20,8 @@ flkty.on( 'scroll', function() {
     img.style[ transformProp ] = 'translateX(' + x  + 'px)';
   });
 });
+
+
+function imgClick(i) {
+  var w = window.open("project/"+i);
+}

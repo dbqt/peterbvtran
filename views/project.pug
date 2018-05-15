@@ -1,0 +1,31 @@
+extends layout
+
+block content
+  
+  div#project_content
+    div.project_content_core
+      br
+      br
+      br
+      br
+      br
+      br
+      h2 #{gallery.name}
+      p #{gallery.description}
+      hr
+      for image in gallery.imgs
+        br
+        p #{image.description}
+        img(src=image.imgUrl)
+        br
+      br
+      br
+      br
+      br
+      br
+      br
+
+
+  
+
+

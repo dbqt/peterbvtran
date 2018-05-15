@@ -2,7 +2,9 @@ var carousel = document.querySelector('.carousel');
 var flkty = new Flickity( carousel, {
   imagesLoaded: true,
   percentPosition: false,
-  autoPlay: false
+  autoPlay: false,
+  draggable: false,
+  prevNextButtons: false
 });
 
 var imgs = carousel.querySelectorAll('.carousel-cell img');

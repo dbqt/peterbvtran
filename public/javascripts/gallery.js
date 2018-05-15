@@ -11,7 +11,7 @@ imagesLoaded( grid, function() {
   msnry = new Masonry( grid, {
     itemSelector: '.grid-item',
     columnWidth: '.grid-sizer',
-    percentPosition: true
+    percentPosition: false
   });
 });
 

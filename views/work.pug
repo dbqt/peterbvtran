@@ -10,10 +10,10 @@ block content
   br
   br
   div.grid
-    div.grid-sizer
+    //div.grid-sizer
     for album in gallery
       //div.grid-sizer
-      div.grid-item
+      div.albumCover
         a.imagePop(data-album=album onclick="albumclick(this)" href="#modalAlbum")
           img.galleryImg(src=album.coverUrl)
 

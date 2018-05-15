@@ -115,41 +115,54 @@ a {
 .grid-item {
   position: relative;
   width: 100vw;
-  margin: 1px;
+  margin: auto;
   text-align: center;
-  overflow: hidden;
+  /*overflow: hidden;*/
 }
 
 @media (min-width: 768px) {
   .grid-sizer,
   .grid-item {
-    width: 50vw;
-    height: 50vw;
+    width: 70vw;
   }
 }
 
 @media (min-width: 1024px) {
   .grid-sizer,
   .grid-item {
-    width: 32vw;
-    height: 32vw;
+    width: 90vw;
   }
 }
 
 .grid-item {
-  float: left;
+  position: relative !important;
 }
 
 .grid-item img {
-  max-height: 110%;
-  min-height: 100%;
-  min-width: 100%; 
-  position: absolute;
-  top: -9999px;
-  bottom: -9999px;
-  left: -9999px;
-  right: -9999px;
-  margin: auto; 
+  width: 100%;
+}
+
+/* album */
+
+.albumCover {
+  position: relative;
+  margin: auto;
+}
+
+@media (min-width: 768px) {
+  .albumCover {
+    width: 70vw;
+  }
+}
+
+@media (min-width: 1024px) {
+  .albumCover {
+    width: 90vw;
+  }
+}
+
+.albumCover img {
+  width: 100%;
 }
 
 /*Carousel*/

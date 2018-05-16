@@ -23,5 +23,5 @@ flkty.on( 'scroll', function() {
 
 
 function imgClick(i) {
-  var w = window.open("project/"+i);
+  var w = window.open("work");
 }

@@ -1,8 +1,13 @@
 extends layout
 
 block content
-  
-  div#project_content
+  script(src="/javascripts/returntotop.js")
+  // return to top
+  a#return-to-top(href="javascript:", onclick="returntotop()")
+    i.icon-chevron-up
+  link(href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet")
+
+  div#project_content.container
     div.project_content_core
       br
       br
@@ -10,14 +15,28 @@ block content
       br
       br
       br
-      h2 #{gallery.name}
-      p #{gallery.description}
-      hr
-      for image in gallery.imgs
-        br
-        p #{image.description}
-        img(src=image.imgUrl)
-        br
+      .row
+        .col-md-3
+          h2 #{gallery.name}
+          p #{gallery.description}
+          div
+            div.a2a_kit.a2a_kit_size_32.a2a_default_style
+              a.a2a_button_facebook
+              a.a2a_button_google_plus
+              a.a2a_button_twitter
+              a.a2a_button_linkedin
+              a.a2a_button_email
+          script
+            var a2a_config = a2a_config || {};
+            a2a_config.onclick = 1;
+          script(async src="https://static.addtoany.com/menu/page.js")
+
+        .col-md-9
+          for image in gallery.imgs
+            br
+            p #{image.description}
+            img(src=image.imgUrl)
+            br
       br
       br
       br

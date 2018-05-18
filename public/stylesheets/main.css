@@ -151,6 +151,7 @@ a {
   height: 19.9vh;
   overflow: hidden;
   padding: 1vh;
+  vertical-align: center;
 }
 
 .albumCover img {
@@ -427,4 +428,14 @@ a {
 #return-to-top:hover i {
   color: #fff;
   top: 5px;
+}
+
+.outer {
+  height: 100%;
+  width: 100%;
+  padding: 8%;
+}
+
+.inner {
+  padding: 5%;
 }

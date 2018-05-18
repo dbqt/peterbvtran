@@ -3,7 +3,7 @@ var requestify = require('requestify'); ;
 var router = express.Router();
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
+/*router.get('/', function(req, res, next) {
   //showreel = {imgs:[]};
   requestify.get('https://peterbvtran.herokuapp.com/api/showcase')
   .then(function(response) {
@@ -15,9 +15,9 @@ router.get('/', function(req, res, next) {
 		console.log("Error in get home with " + err.getBody()); // Some error code such as, for example, 404
 	});
  // res.render('index', {showcase: showreel});
-});
+});*/
 
-router.get('/work', function(req, res, next) {
+router.get('/', function(req, res, next) {
   //galleryImgs = {imgs:[]};
   requestify.get('https://peterbvtran.herokuapp.com/api/gallery')
   .then(function(response) {

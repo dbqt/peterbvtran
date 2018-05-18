@@ -25,7 +25,8 @@ function albumclick(album) {
 
     //allImgs = JSON.parse(album.getAttribute("data-album"));
     
-    var w = window.open("project/"+album.getAttribute("index"));
+    //var w = window.open("project/"+album.getAttribute("index"));
+    window.location.href = "project/"+album.getAttribute("index");
     /*var modalContent = w.document.createElement("DIV");
     modalContent.className = "project_content_core";
 

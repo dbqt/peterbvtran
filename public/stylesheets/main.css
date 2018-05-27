@@ -150,7 +150,7 @@ a {
   width: 60vw;
   height: 19.9vh;
   overflow: hidden;
-  padding: 1vh;
+  padding: 0.5vh;
   vertical-align: center;
 }
 
@@ -433,9 +433,6 @@ a {
 .outer {
   height: 100%;
   width: 100%;
-  padding: 2%;
+  padding: 6.4%;
 }
 
-.inner {
-  padding: 5%;
-}
